@@ -1,77 +1,98 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="X-UA-compatible" content="EI=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" 
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-<link rel="stylesheet" href="styles.css">
-
-<title>Nogiyan Art-store</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Nogiyan Art-store</title>
+</head>
+<body>
     <nav>
         <div class="navTop">
             <div class="navItem">
-                <img src="" width="75px" height="75px" alt="">
-                <h1>Nogiyan</h1>
+                <img src="img/backgrounds/Logo.jpg" width="120px" height="120px" alt="">
+                <h1>Nogiyan Art Store</h1>
             </div>
             <div class="navItem">
                 <div class="search">
-                <input type="text" placeholder="Search..." class="searchInput">
-                <i class="fa-solid fa-magnifying-glass">
-                </i>
-            </div>
+                    <input type="text" placeholder="Search..." class="searchInput">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </div>
             <div class="navItem">
                 <span class="limitedOffer">Limited Offer!</span>
             </div>
         </div>
+
         <div class="navBottom">
-            <h3 class="menuItem">Fallen-Sky</h3>
-            <h3 class="menuItem">Space-Rift</h3>
-            <h3 class="menuItem">Heterochromatic</h3>
-            <h3 class="menuItem">Psychedelic</h3>
-            <h3 class="menuItem">Transcendence</h3>
-        </div>
+        <h3 class="menuItem">Fallen-Sky</h3>
+        <h3 class="menuItem">Space-Rift</h3>
+        <h3 class="menuItem">Heterochromatic</h3>
+        <h3 class="menuItem">Psychedelic</h3>
+        <h3 class="menuItem">Transcendence</h3>
+    </div>
     </nav>
+
+    <div class="navBottom">
+        <h3 class="menuItem" id="painting-1">Fallen-Sky</h3>
+        <h3 class="menuItem" id="painting-2">Space-Rift</h3>
+        <h3 class="menuItem" id="painting-3">Heterochromatic</h3>
+        <h3 class="menuItem" id="painting-4">Psychedelic</h3>
+        <h3 class="menuItem" id="painting-5">Transcendence</h3>
+    </div>
 
     <div class="slider">
         <div class="sliderWrapper">
+            <!-- Item 1 -->
             <div class="sliderItem">
-                <img src="/img/Products/Item_1.jpg" width="550px" height="350px" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Fallen-Sky </br>NEW</br>ADDITION</h1>
-                <h2 class="sliderPrice">$1,000,000</h2>
-                <button class="buyButton">Buy Now</button>
+                <img src="img/Products/Item_1.jpg" class="sliderImg" alt="Fallen-Sky">
+                <div class="sliderContent">
+                    <h1 class="sliderTitle">Fallen-Sky<br>NEW<br>ADDITION</h1>
+                    <h2 class="sliderPrice">$1,000,000</h2>
+                    <button class="buyButton">Buy Now</button>
+                </div>
             </div>
+            <!-- Item 2 -->
             <div class="sliderItem">
-                <img src="/img/Products/Item_2.jpg" width="550px" height="350px" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Space-Rift </br>NEW</br>ADDITION</h1>
-                <h2 class="sliderPrice">$2,500,000</h2>
-                <button class="buyButton">Buy Now</button>
+                <img src="img/Products/Item_2.jpg" class="sliderImg" alt="Space-Rift">
+                <div class="sliderContent">
+                    <h1 class="sliderTitle">Space-Rift<br>NEW<br>ADDITION</h1>
+                    <h2 class="sliderPrice">$2,500,000</h2>
+                    <button class="buyButton">Buy Now</button>
+                </div>
             </div>
+            <!-- Item 3 -->
             <div class="sliderItem">
-                <img src="/img/Products/Item_3.jpg" width="550px" height="350px" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Heterochrome</br>NEW</br>ADDITION</h1>
-                <h2 class="sliderPrice">$1,000,000</h2>
-                <button class="buyButton">Buy Now</button>
+                <img src="img/Products/Item_3.jpg" class="sliderImg" alt="Heterochromatic">
+                <div class="sliderContent">
+                    <h1 class="sliderTitle">Heterochromatic<br>NEW<br>ADDITION</h1>
+                    <h2 class="sliderPrice">$1,000,000</h2>
+                    <button class="buyButton">Buy Now</button>
+                </div>
             </div>
+            <!-- Item 4 -->
             <div class="sliderItem">
-                <img src="/img/Products/Item_4.jpg" width="550px" height="350px" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Psychedelic </br>NEW</br>ADDITION</h1>
-                <h2 class="sliderPrice">$1,100,000</h2>
-                <button class="buyButton">Buy Now</button>
+                <img src="img/Products/Item_4.jpg" class="sliderImg" alt="Psychedelic">
+                <div class="sliderContent">
+                    <h1 class="sliderTitle">Psychedelic<br>NEW<br>ADDITION</h1>
+                    <h2 class="sliderPrice">$1,100,000</h2>
+                    <button class="buyButton">Buy Now</button>
+                </div>
             </div>
+            <!-- Item 5 -->
             <div class="sliderItem">
-                <img src="/img/Products/Item_5.jpg" width="550px" height="350px" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">Transcendence </br>NEW</br>ADDITION</h1>
-                <h2 class="sliderPrice">$950,000</h2>
-                <button class="buyButton">Buy Now</button>
+                <img src="img/Products/Item_5.jpg" class="sliderImg" alt="Transcendence">
+                <div class="sliderContent">
+                    <h1 class="sliderTitle">Transcendence<br>NEW<br>ADDITION</h1>
+                    <h2 class="sliderPrice">$950,000</h2>
+                    <button class="buyButton">Buy Now</button>
+                </div>
             </div>
         </div>
     </div>
+
     <script src="./app.js"></script>
 </body>
 </html>

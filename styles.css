@@ -1,24 +1,48 @@
-body{
-  font-family: 'Lato' , sans-serif; 
-  padding: 0;
-  margin: 0;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: black; /* Sets the default background color */
+    color: white; /* Text color */
 }
 
-nav{
-   background-color: #111;
-   color: white;
-   padding: 20px 50px;
-   position: sticky;
-   width: 100%;
+html {
+    padding: 0;
+    margin: 0;
 }
 
-.navTop{
+nav {
+    background-color: #111;
+    color: white;
+    padding: 20px 50px;
+    position: fixed; /* Fixes the navbar */
+    top: 0; /* Sticks it to the top */
+    left: 0;
+    width: 100%; /* Spans the entire width */
+    z-index: 10; /* Ensures it stays above other content */
+}
+
+.navTop {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.search{
+.navBottom {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menuItem {
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.search {
     display: flex;
     align-items: center;
     background-color: gray;
@@ -26,66 +50,97 @@ nav{
     border-radius: 10px;
 }
 
-.searchInput{
+.searchInput {
     border: none;
     background-color: transparent;
     height: 25px;
 }
 
-.searchInput::placeholder{
- color: lightgray;
-}
+    .searchInput::placeholder {
+        color: lightgray;
+    }
 
-.limitedOffer{
+.limitedOffer {
     font-size: 20px;
     border-bottom: 2px solid purple;
 }
 
-.navBottom{
+.navBottom {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.menuItem{
+.menuItem {
     margin-right: 80px;
     cursor: pointer;
     color: lightgray;
     font-weight: 400;
 }
 
-.slider{
-    background: image("https://www.pexels.com/photo/blue-abstract-painting-1568607/");
-}
-
-.sliderImg{
-   border: solid purple;
-}
-
-.sliderWrapper{
+.slider {
     display: flex;
-    width: 500vw;
-
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    scroll-behavior: smooth; /* Smooth scrolling when transitioning */
+    height: 100vh; /* Full screen height for each item */
+    background-color: gray; /* Background for the slider */
+    width: 100vw; /* Ensure full viewport width */
 }
 
-.sliderItem{
-    margin-left: 30px;
-    width:100vw;
+.sliderWrapper {
+    display: flex; /* Arrange items in a row */
+    width: 100%; /* Take full width */
+    height: 100%; /* Full height of the screen */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+}
+
+.sliderItem {
+    flex: 0 0 100%; /* Each item takes up the full screen width */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: 70px;
+    align-items: center; /* Center vertically */
+    justify-content: space-around; /* Space out image and details */
+    height: 100%; /* Full height for each item */
+    padding: 20px; /* Add padding inside each item */
+    box-sizing: border-box;
 }
 
-.buyButton{
-    font-size: 20px;
+.sliderImg {
+    width: 40%; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    border: 5px solid purple; /* Optional styling */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.sliderContent {
+    width: 40%; /* Take up 40% of the screen */
+    display: flex;
+    flex-direction: column; /* Stack title, price, and button */
+    justify-content: center; /* Center content vertically */
+    gap: 20px; /* Add space between elements */
+    text-align: left; /* Align text to the left */
+}
+
+.sliderTitle {
+    font-size: 32px;
+    margin: 0;
+}
+
+.sliderPrice {
+    font-size: 24px;
+    color: lightgray;
+    margin: 0;
+}
+
+.buyButton {
+    font-size: 18px;
+    padding: 10px 20px;
     color: white;
-    border: 1px solid gray;
     background-color: black;
+    border: 2px solid white;
     cursor: pointer;
 }
 
-.buyButton:hover{
-    background-color: white;
-    color: black;
-}
+    .buyButton:hover {
+        background-color: white;
+        color: black;
+    }
