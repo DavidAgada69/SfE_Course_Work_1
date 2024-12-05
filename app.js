@@ -1,67 +1,31 @@
+// Get all menu items and the sliderWrapper
 const wrapper = document.querySelector(".sliderWrapper");
 const menuItem  = document.querySelectorAll(".menuItem");
 
-const products = [
-    {
-    id: painting-1,
-    title: "Fallen-Sky",
-    price: 1000000,
-    colors: [
-        {
-        code: "black",
-        img: "./img/Products/Item_1",
-    },
-    ],
-},
-{
-    id: painting-2,
-    title: "Space-Rift",
-    price: 1000000,
-    colors: [
-        {
-        code: "black",
-        img: "./img/Products/Item_2",
-    },
-    ],
-},
-{
-    id: painting-3,
-    title: "Heterochrome",
-    price: 1000000,
-    colors: [
-        {
-        code: "black",
-        img: "./img/Products/Item_3",
-    },
-    ],
-},
-{
-    id: painting-4,
-    title: "Psychedelic",
-    price: 1000000,
-    colors: [
-        {
-        code: "black",
-        img: "./img/Products/Item_4",
-    },
-    ],
-},
-{
-    id: painting-5,
-    title: "Transcendence",
-    price: 1000000,
-    colors: [
-        {
-        code: "black",
-        img: "./img/Products/Item_5",
-    },
-    ],
-},
-],
 
+// Add click events to navigation items
 menuItem.forEach((item, index) =>{
-    itemaddEventListener("click", () =>{
+    item.addEventListener("click", () =>{
         wrapper.style.transform = `translateX(${-100 * index}vw)`;
     }); 
 });
 
+
+//menuItems.forEach((item, index) => {
+//    item.addEventListener('click', () => {
+//        // Calculate the translateX value based on the index
+//        const offset = index * window.innerWidth;
+//        sliderWrapper.style.transform = `translateX(-${offset}px)`;
+//    });
+//});
+
+// Attach event listeners to all Buy Now buttons
+document.querySelectorAll(".buyButton").forEach((button, index) => {
+    button.addEventListener("click", () => {
+        // Get the corresponding painting ID from the parent slider item
+        const paintingId = `painting-${index + 1}`;
+
+        // Redirect to payment.html with the painting ID as a query parameter
+        window.location.href = `payment.html?paintingId=${paintingId}`;
+    });
+});
