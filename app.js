@@ -1,16 +1,67 @@
-const wrapper = document.querySelector(".sliderWrapper")
+const wrapper = document.querySelector(".sliderWrapper");
+const menuItem  = document.querySelectorAll(".menuItem");
 
-console.log(wrapper)
+const products = [
+    {
+    id: painting-1,
+    title: "Fallen-Sky",
+    price: 1000000,
+    colors: [
+        {
+        code: "black",
+        img: "./img/Products/Item_1",
+    },
+    ],
+},
+{
+    id: painting-2,
+    title: "Space-Rift",
+    price: 1000000,
+    colors: [
+        {
+        code: "black",
+        img: "./img/Products/Item_2",
+    },
+    ],
+},
+{
+    id: painting-3,
+    title: "Heterochrome",
+    price: 1000000,
+    colors: [
+        {
+        code: "black",
+        img: "./img/Products/Item_3",
+    },
+    ],
+},
+{
+    id: painting-4,
+    title: "Psychedelic",
+    price: 1000000,
+    colors: [
+        {
+        code: "black",
+        img: "./img/Products/Item_4",
+    },
+    ],
+},
+{
+    id: painting-5,
+    title: "Transcendence",
+    price: 1000000,
+    colors: [
+        {
+        code: "black",
+        img: "./img/Products/Item_5",
+    },
+    ],
+},
+],
 
-// Get all menu items and the sliderWrapper
-const menuItems = document.querySelectorAll('.menuItem');
-const sliderWrapper = document.querySelector('.sliderWrapper');
-
-// Add click events to navigation items
-menuItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        // Calculate the translateX value based on the index
-        const offset = index * window.innerWidth;
-        sliderWrapper.style.transform = `translateX(-${offset}px)`;
-    });
+menuItem.forEach((item, index) =>{
+    itemaddEventListener("click", () =>{
+        wrapper.style.transform = `translateX(${-100 * index}vw)`;
+    }); 
 });
+
