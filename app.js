@@ -10,15 +10,6 @@ menuItem.forEach((item, index) =>{
     }); 
 });
 
-
-//menuItems.forEach((item, index) => {
-//    item.addEventListener('click', () => {
-//        // Calculate the translateX value based on the index
-//        const offset = index * window.innerWidth;
-//        sliderWrapper.style.transform = `translateX(-${offset}px)`;
-//    });
-//});
-
 // Attach event listeners to all Buy Now buttons
 document.querySelectorAll(".buyButton").forEach((button, index) => {
     button.addEventListener("click", () => {
